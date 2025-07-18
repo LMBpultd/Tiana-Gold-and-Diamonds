@@ -441,7 +441,117 @@
     color: white;
     font-size: 3.7vw;
   }
+
+  .hand {
+  position: relative;
+  display: inline-block;
+  width: 100vw;
+  overflow: hidden;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
+.hand img {
+  width: 200%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transform: translate(-18.4%, 0%);
+    margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+
+.overlayxx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* initial black with 0.5 opacity */
+  transition: opacity 0.3s ease-in-out;
+    margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.hand:hover .overlayxx, .overlayx:hover .overlayxx {
+  background-color: rgba(0, 0, 0, 0); /* initial black with 0.5 opacity */
+}
+
+footer{
+    margin-top:-7px; 
+}
+
+.overlayx p{
+  background: none;
+  color: white;
+  text-align: center;
+  padding: 50px 25px;
+  font-size: 4vw;
+}
+
+.overlayx h2{
+  background: none;
+  color: white;
+  text-align: center;
+  padding: 0 15px;
+  font-size: 6vw;
+  margin-top: 0px;
+}
+
+.cdcd{
+  background-color: #721e83;
+  padding: 10px 20px;
+  border: 0;
+  margin-top: 25px;
+}
+
+.cdcd a{
+  text-decoration: none;
+  color: white;
+  font-size: 4.5vw;
+  font-weight: 600;
+}
+
+
+
+}
+
+
+
+@keyframes slideUpFadeIn {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+.overlayx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0);
+
+  /* Animation */
+  animation: slideUpFadeIn 0.8s ease-out forwards;
+  animation-delay: 0.5s; /* Optional: delay to start animation */
+  opacity: 0;
+}
+
+
+
 
 .fa-star {
   font-size: 30px;
@@ -887,6 +997,90 @@ span {
     color: rgb(255, 255, 255);
     padding-bottom: 10px;
   }
+
+.hand {
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+}
+
+.hand img {
+  display: block;
+  width: 100%;
+}
+
+.overlayx {
+  position: absolute;  
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0); /* initial black with 0.5 opacity */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.overlayxx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* initial black with 0.5 opacity */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.hand:hover .overlayxx, .overlayx:hover .overlayxx {
+  background-color: rgba(0, 0, 0, 0); /* initial black with 0.5 opacity */
+}
+
+
+.overlayx p{
+  background: none;
+  color: white;
+  text-align: center;
+  padding: 50px 25px;
+  font-size: 2.4vw;
+}
+
+.overlayx h2{
+  background: none;
+  color: white;
+  text-align: center;
+  padding: 0 15px;
+  font-size: 4vw;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.cdcd{
+  background-color: #721e83;
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 10px;
+  margin-top: 25px;
+}
+
+.cdcd a{
+  text-decoration: none;
+  color: white;
+  font-size: 3vw;
+  font-weight: 600;
+}
+
+
+
+
+
+}
+
+
+.overlayx{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+font-family: Arial, Helvetica, sans;
 }
 
 .c10 {
@@ -902,6 +1096,7 @@ footer {
   background-color: black;
   padding-top: 40px;
   margin-bottom: 0;
+  margin-top: -7px;
   padding-bottom: 60px;
   position: relative;
 }

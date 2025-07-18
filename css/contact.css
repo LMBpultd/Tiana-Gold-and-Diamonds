@@ -1,0 +1,197 @@
+@media screen and (max-width: 1000px) {
+  .contact {
+    width: 90vw;
+    margin-left: 5vw;
+    margin: 50px auto;
+  }
+
+  .contact-data {
+    width: 90vw;
+  }
+
+  h1 {
+    font-size: 9.5vw;
+    margin-bottom: 50px;
+  }
+
+  h3 {
+    font-size: 6vw;
+    transform: scaleY(1.3);
+    margin-top: 35px;
+  }
+
+  h4 {
+    font-size: 5.5vw;
+    transform: scaleY(1.3);
+    font-weight: bolder;
+    margin-top: 40px;
+  }
+
+  p {
+    font-size: 4.3vw;
+  }
+
+  .contacts-b a {
+    font-size: 4vw;
+  }
+
+  .contacts-b a i {
+    font-size: 4.5vw;
+  }
+
+  .chbd {
+    width: 49%;
+    min-height: 50px;
+    border: 0;
+  }
+
+  .chbd a {
+    font-size: 5vw;
+    font-weight: 600;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+  }
+
+  .cdcd {
+    margin-top: -25px;
+  }
+
+  .map {
+    display: none;
+  }
+
+  .map-mob {
+    width: 100vw;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .contact {
+    width: 90vw;
+    margin-left: 5vw;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 70px;
+  }
+
+  .contact-data {
+    width: 50%;
+  }
+
+  .map {
+    width: 48%;
+    height: 500px;
+    margin-top: 80px;
+    margin-left: 2%;
+  }
+
+  h1 {
+    font-size: 4vw;
+    margin-bottom: 50px;
+  }
+
+  h3 {
+    font-size: 2.3vw;
+    transform: scaleY(1.3);
+    margin-top: 35px;
+  }
+
+  h4 {
+    font-size: 2.5vw;
+    transform: scaleY(1.3);
+    font-weight: bolder;
+    margin-top: 40px;
+  }
+
+  p {
+    font-size: 2vw;
+    font-weight: bold;
+    font-style: normal;
+    margin-top: 15px;
+    padding-left: 15px;
+  }
+
+  .contacts-b {
+    margin-bottom: 13px;
+    padding-left: 15px;
+  }
+
+  .contacts-b a {
+    font-size: 1.6vw;
+  }
+
+  .contacts-b a i {
+    font-size: 2vw;
+  }
+
+  .chbd {
+    width: 49%;
+    min-height: 50px;
+    border: 0;
+  }
+
+  .chbd a {
+    font-size: 2.5vw;
+    font-weight: 600;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+  }
+
+  .map-mob {
+    display: none;
+  }
+}
+
+h1 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 600;
+  color: rgb(0, 0, 224);
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 600;
+  color: rgb(32, 32, 131);
+  margin-bottom: 15px;
+}
+
+h4 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: rgb(75, 7, 107);
+  margin-bottom: 10px;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(47, 25, 82);
+  font-weight: 500;
+  margin-bottom: 30px;
+  margin-left: 10px;
+}
+
+.contacts-b {
+  border: 0;
+  background: none;
+  margin-top: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.gp {
+  height: 15px;
+}
+
+.contacts-b a i {
+  margin-right: 15px;
+}

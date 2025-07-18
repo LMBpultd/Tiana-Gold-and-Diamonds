@@ -1,0 +1,28 @@
+.gallerydiv {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+@media screen and (max-width: 1000px) {
+  .gallerydiv1 {
+    width: 90vw;
+    padding: 5vw;
+  }
+
+  .gallerydiv1 img {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .gallerydiv1 {
+    width: 25vw;
+    padding: 2.5vw;
+  }
+
+  .gallerydiv1 img {
+    width: 100%;
+  }
+}

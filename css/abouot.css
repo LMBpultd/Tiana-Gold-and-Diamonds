@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+@media screen and (max-width: 1000px) {
+  .abh-data-desk {
+    display: none;
+  }
+
+  .abh1 {
+    width: 100vw;
+    position: relative;
+    margin-top: 5px;
+  }
+
+  .abh1 img {
+    width: 100%;
+  }
+
+  #abh11 {
+    font-size: 9vw;
+    font-weight: 600;
+  }
+
+  .abh-data-mob {
+    width: 90vw;
+    margin-left: 5vw;
+    margin-top: 50px;
+    opacity: 0; /* initial state */
+    animation: fadeIn 1s ease-in forwards;
+    animation-delay: 0.5s; /* optional delay */
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .amh {
+    text-align: center;
+    line-height: 1.5;
+    transform: scaleY(1.6);
+    background: none;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .amhp {
+    margin-top: 40px;
+    text-align: justify;
+    font-size: 3.4vw;
+  }
+
+  .amh1 {
+    text-align: center;
+    line-height: 1.5;
+    transform: scaleY(1.2);
+    font-size: 6vw;
+    background: none;
+    color: blueviolet;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .amh12 {
+    width: 70vw;
+    margin-left: 10vw;
+    margin-top: 25px;
+  }
+
+  #gegal {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0;
+  }
+
+  .gogal {
+    width: fit-content;
+    padding: 8px 20px;
+    background-color: blueviolet;
+    border: 0;
+    border-radius: 10px;
+  }
+
+  .gogal a {
+    font-weight: bold;
+    font-size: 2.6vw;
+    text-decoration: none;
+    color: white;
+  }
+
+  .a3aba {
+    width: 90vw;
+    margin-left: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .a3ad {
+    width: 100%;
+    margin-bottom: 80px;
+  }
+
+  .a3ad h1 {
+    font-size: 32vw;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 502;
+    font-style: normal;
+    text-align: center;
+    color: rgb(184, 148, 160);
+    transform: scaleY(1.4);
+    background: none;
+    margin-bottom: 35px;
+  }
+  .a3ad p {
+    text-align: center;
+    font-size: 4.6vw;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    margin-left: -50px;
+    color: rgb(184, 148, 160);
+  }
+
+  .a3ad h2 {
+    font-weight: 600;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 502;
+    font-style: normal;
+    font-size: 10vw;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .abh-data-mob {
+    display: none;
+  }
+
+  .abh1 {
+    width: 100vw;
+    position: relative;
+    margin-top: 15px;
+    overflow: hidden;
+    height: 400px;
+  }
+
+  .abh1 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    top: -20%;
+  }
+
+  .abh-data-desk {
+    width: 90vw;
+    margin-left: 5vw;
+  }
+
+  .amh12 {
+    width: 90%;
+    padding: 5%;
+  }
+
+  .d1 {
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .d11 {
+    width: 35%;
+  }
+
+  .amh1 {
+    font-size: 2vw;
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 600;
+    color: rgb(102, 30, 168);
+    transform: scaleY(1.3);
+  }
+
+  .d12 {
+    width: 68%;
+  }
+
+  .amh {
+    font-size: 2.5vw;
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 650;
+    transform: scaleY(1.3);
+    margin-bottom: 10px;
+  }
+
+  .d2 {
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .d21 {
+    width: 35%;
+  }
+
+  .d22 {
+    width: 34%;
+    margin-top: 13px;
+    padding: 0 10px;
+    text-align: justify;
+  }
+
+  #gegal {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0;
+  }
+
+  .gogal {
+    width: fit-content;
+    padding: 8px 20px;
+    background-color: blueviolet;
+    border: 0;
+    border-radius: 10px;
+  }
+
+  .gogal a {
+    font-weight: bold;
+    font-size: 1.6vw;
+  }
+
+  .a3aba {
+    width: 91.5vw;
+    margin-left: 4.25vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .a3ad {
+    width: 33.5%;
+    margin-bottom: 80px;
+  }
+
+  .a3ad h1 {
+    font-size: 10vw;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 502;
+    font-style: normal;
+    text-align: center;
+    color: rgb(184, 148, 160);
+    transform: scaleY(1.4);
+    background: none;
+    margin-bottom: 35px;
+  }
+  .a3ad p {
+    text-align: center;
+    font-size: 2.6vw;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    margin-left: -50px;
+    color: rgb(184, 148, 160);
+    background: none;
+  }
+
+  .a3ad h2 {
+    font-weight: 600;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 602;
+    font-style: normal;
+    font-size: 3.6vw;
+    text-align: center;
+    padding-top: 40px;
+  }
+}

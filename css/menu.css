@@ -96,7 +96,7 @@
     overflow: hidden;
     max-height: 0;
     opacity: 0;
-    transition: max-height 2s ease, opacity 5s ease;
+    transition: max-height 2s ease, opacity 3s ease;
   }
   #menu.show {
     max-height: 500px; /* Adjust to the expected content height */
