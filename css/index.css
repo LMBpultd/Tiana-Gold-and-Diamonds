@@ -613,7 +613,7 @@ span {
   .home img {
     width: 100%;
     position: absolute;
-    top: -10%;
+    top: -25%;
     z-index: 1;
   }
 
