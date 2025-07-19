@@ -604,7 +604,7 @@ span {
   }
 
   .home {
-    background-image: url('images/index/home.png'); /* Replace with your image path */
+    background-image: url('../images/index/home.png'); /* Replace with your image path */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
