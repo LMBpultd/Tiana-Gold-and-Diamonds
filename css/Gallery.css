@@ -1,28 +1,104 @@
 .gallerydiv {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
+  flex-direction: row;
   justify-content: space-evenly;
+  
 }
 
+/* For screens smaller than 1000px (mobile/tablet) */
 @media screen and (max-width: 1000px) {
-  .gallerydiv1 {
+  .gds {
     width: 90vw;
-    padding: 5vw;
+    padding: 20px 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  .gallerydiv1 img {
+  .gds img {
     width: 100%;
+    height: auto;
+    object-fit: contain;
   }
+
+    .gds img {
+    pointer-events: none;
+  }
+
 }
 
+/* For screens larger than 1000px (desktop) */
 @media screen and (min-width: 1000px) {
-  .gallerydiv1 {
-    width: 25vw;
-    padding: 2.5vw;
+  .gds {
+    width: 20vw;
+    aspect-ratio: 2 / 3;   /* Maintain portrait ratio */
+    overflow: hidden;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 50px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Optional: subtle shadow */
+    background-color: #f9f9f9;             /* Optional: light background */
   }
 
-  .gallerydiv1 img {
+  .gds img {
     width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
   }
+
+  .gallerydiv {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: last baseline;
 }
+}
+
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  max-width: 80vw;
+  max-height: 80vh;
+  border-radius: 8px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+.modal-content {
+  max-width: 80vw;
+  max-height: 80vh;
+  transition: transform 0.2s ease-in-out;
+  transform-origin: center center;
+}
+
+

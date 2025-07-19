@@ -97,7 +97,7 @@
 <img src="images/About/a12.png" class="amh12">
     </div>
 
- <div class="abh-data-desk">
+ <div class="abh-data-desk fade-in"">
 
   <div class="d1">
       <div class="d11"><h1 class="amh1">Elegance in every sparkle</h1></div>
@@ -126,6 +126,30 @@
  </div>
 
 
+ <style>
+ .fade-in {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0px);
+}
+</style>
+<script>
+  window.addEventListener("DOMContentLoaded", function () {
+    const fadeElements = document.querySelectorAll(".fade-in");
+
+    fadeElements.forEach((el, index) => {
+      setTimeout(() => {
+        el.classList.add("visible");
+      }, index * 300); // stagger each by 300ms
+    });
+  });
+</script>
+
 
 
 <div id="gegal">
@@ -148,11 +172,50 @@
       <img src="images/index/uniq/2.png" class="uni-img" />
     </div>
 
-    <div class="a3aba">
-      <div class="a3ad"><h1>120+</h1><p>Unique Jewelers</p></div>
-      <div class="a3ad"><h2>Crafted for elegance, designed for you</h2></div>
-      <div class="a3ad"><h1>5K+</h1><p>Happy Customers</p></div>
-    </div>
+<div class="a3aba">
+  <div class="a3ad">
+    <h1 id="counter1">0</h1>
+    <p>Unique Jewelers</p>
+  </div>
+  <div class="a3ad">
+    <h2>Crafted for elegance, designed for you</h2>
+  </div>
+  <div class="a3ad">
+    <h1 id="counter2">0</h1>
+    <p>Happy Customers</p>
+  </div>
+</div>
+
+<script>
+  function animateCounter(id, end, finalText, duration = 5000, delay = 500) {
+    const counterElement = document.getElementById(id);
+    const start = 0;
+    const startTime = performance.now() + delay;
+
+    function update(currentTime) {
+      const elapsed = currentTime - startTime;
+      if (elapsed < 0) {
+        requestAnimationFrame(update);
+        return;
+      }
+
+      const progress = Math.min(elapsed / duration, 1);
+      const currentValue = Math.floor(progress * (end - start) + start);
+
+      if (progress < 1) {
+        counterElement.textContent = `${Math.floor(currentValue / 1000)}k+`;
+        requestAnimationFrame(update);
+      } else {
+        counterElement.textContent = finalText;
+      }
+    }
+
+    requestAnimationFrame(update);
+  }
+
+  animateCounter("counter1", 120000, "120k+");
+  animateCounter("counter2", 5000, "5k+");
+</script>
 
     <div class="hand">
 <img src="images/index/feethand.webp">
@@ -193,7 +256,7 @@
 
 <a><i class="fas fa-map-marker-alt icon-outline"> <span>College Rd, Kothamangalam, Kerala 686691</span> </i></a>
 <a href="tel:+919645522916"><i class="fas fa-phone icon-outline"><span>+91 96455 22916</span></i></a>
-<a href="https://mail.google.com/mail/?view=cm&to=tianagoldanddiamonds@gmail.com" target="_blank"><i class="fas fa-envelope icon-outline"><span> tianagoldanddiamonds@gmail.com </span></i></a>
+<a href="https://mail.google.com/mail/?view=cm&to=tianaklmtower@gmail.com" target="_blank"><i class="fas fa-envelope icon-outline"><span> tianaklmtower@gmail.com </span></i></a>
 <a href="https://maps.app.goo.gl/LbqQLvwL2xSKGuHf8"><i class="fas fa-paperclip icon-outline"><span>Navigate</span></i></a>
 
 

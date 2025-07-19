@@ -105,7 +105,7 @@
   }
 
   .a3ad h1 {
-    font-size: 32vw;
+    font-size: 24vw;
     font-family: "Playfair Display", serif;
     font-optical-sizing: auto;
     font-weight: 502;
@@ -130,9 +130,11 @@
     font-optical-sizing: auto;
     font-weight: 502;
     font-style: normal;
-    font-size: 10vw;
+    font-size: 8vw;
     text-align: center;
   }
+
+
 }
 
 @media screen and (min-width: 1000px) {
@@ -251,7 +253,7 @@
   }
 
   .a3ad h1 {
-    font-size: 10vw;
+    font-size: 6vw;
     font-family: "Playfair Display", serif;
     font-optical-sizing: auto;
     font-weight: 502;
@@ -264,7 +266,7 @@
   }
   .a3ad p {
     text-align: center;
-    font-size: 2.6vw;
+    font-size: 2vw;
     font-family: Georgia, "Times New Roman", Times, serif;
     margin-left: -50px;
     color: rgb(184, 148, 160);
@@ -277,7 +279,7 @@
     font-optical-sizing: auto;
     font-weight: 602;
     font-style: normal;
-    font-size: 3.6vw;
+    font-size: 3vw;
     text-align: center;
     padding-top: 40px;
   }

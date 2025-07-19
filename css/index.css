@@ -511,8 +511,6 @@ footer{
   font-weight: 600;
 }
 
-
-
 }
 
 
@@ -635,21 +633,28 @@ span {
     display: none;
   }
 
-  .home-data {
-    position: absolute;
-    z-index: 3;
-    top: 0;
-    left: 0;
-    background: none;
-    width: 90%;
-    margin-left: 5%;
-    height: 100%;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: left;
-  }
+.home-data {
+  position: absolute;
+  z-index: 3;
+  top: 50%;                /* Vertical center */
+  left: 0;                 /* Align to left */
+  transform: translateY(-50%);  /* Only shift vertically */
+  background: none;
+  width: 80%;
+  height: auto;
+  color: white;
+  opacity: 0;
+  transition: all 2s ease;
+  text-align: left;        /* Align text to the left */
+  padding-left: 5%;        /* Optional: add some spacing from the left edge */
+}
+
+/* This class is added after page load */
+.home-data.show {
+  opacity: 1;
+}
+
+
 
   .home-data h1 {
     background: none;
