@@ -356,7 +356,7 @@
 
   #x h1 {
     font-size: 7vw;
-      font-weight: 600;
+    font-weight: 600;
     padding-bottom: 14px;
     background: none;
   }
@@ -441,79 +441,76 @@
   }
 
   .hand {
-  position: relative;
-  display: inline-block;
-  width: 100vw;
-  overflow: hidden;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-.hand img {
-  width: 200%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-  transform: translate(-18.4%, 0%);
+    position: relative;
+    display: inline-block;
+    width: 100vw;
+    overflow: hidden;
     margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-
-.overlayxx {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4); /* initial black with 0.5 opacity */
-  transition: opacity 0.3s ease-in-out;
+    padding-bottom: 0;
+  }
+  .hand img {
+    width: 200%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transform: translate(-18.4%, 0%);
     margin-bottom: 0;
-  padding-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .overlayxx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* initial black with 0.5 opacity */
+    transition: opacity 0.3s ease-in-out;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .hand:hover .overlayxx,
+  .overlayx:hover .overlayxx {
+    background-color: rgba(0, 0, 0, 0); /* initial black with 0.5 opacity */
+  }
+
+  footer {
+    margin-top: -7px;
+  }
+
+  .overlayx p {
+    background: none;
+    color: white;
+    text-align: center;
+    padding: 50px 25px;
+    font-size: 4vw;
+  }
+
+  .overlayx h2 {
+    background: none;
+    color: white;
+    text-align: center;
+    padding: 0 15px;
+    font-size: 6vw;
+    margin-top: 0px;
+  }
+
+  .cdcd {
+    background-color: #721e83;
+    padding: 10px 20px;
+    border: 0;
+    margin-top: 25px;
+  }
+
+  .cdcd a {
+    text-decoration: none;
+    color: white;
+    font-size: 4.5vw;
+    font-weight: 600;
+  }
 }
-
-.hand:hover .overlayxx, .overlayx:hover .overlayxx {
-  background-color: rgba(0, 0, 0, 0); /* initial black with 0.5 opacity */
-}
-
-footer{
-    margin-top:-7px; 
-}
-
-.overlayx p{
-  background: none;
-  color: white;
-  text-align: center;
-  padding: 50px 25px;
-  font-size: 4vw;
-}
-
-.overlayx h2{
-  background: none;
-  color: white;
-  text-align: center;
-  padding: 0 15px;
-  font-size: 6vw;
-  margin-top: 0px;
-}
-
-.cdcd{
-  background-color: #721e83;
-  padding: 10px 20px;
-  border: 0;
-  margin-top: 25px;
-}
-
-.cdcd a{
-  text-decoration: none;
-  color: white;
-  font-size: 4.5vw;
-  font-weight: 600;
-}
-
-}
-
-
 
 @keyframes slideUpFadeIn {
   from {
@@ -525,7 +522,6 @@ footer{
     opacity: 1;
   }
 }
-
 
 .overlayx {
   position: absolute;
@@ -541,13 +537,9 @@ footer{
   background-color: rgba(0, 0, 0, 0);
 
   /* Animation */
-  animation: slideUpFadeIn 0.8s ease-out forwards;
-  animation-delay: 0.5s; /* Optional: delay to start animation */
+  animation: slideUpFadeIn 3s ease-out forwards;
   opacity: 0;
 }
-
-
-
 
 .fa-star {
   font-size: 30px;
@@ -621,7 +613,7 @@ span {
   .home img {
     width: 100%;
     position: absolute;
-    top: -5vh;
+    top: -10%;
     z-index: 1;
   }
 
@@ -633,28 +625,26 @@ span {
     display: none;
   }
 
-.home-data {
-  position: absolute;
-  z-index: 3;
-  top: 50%;                /* Vertical center */
-  left: 0;                 /* Align to left */
-  transform: translateY(-50%);  /* Only shift vertically */
-  background: none;
-  width: 80%;
-  height: auto;
-  color: white;
-  opacity: 0;
-  transition: all 2s ease;
-  text-align: left;        /* Align text to the left */
-  padding-left: 5%;        /* Optional: add some spacing from the left edge */
-}
+  .home-data {
+    position: absolute;
+    z-index: 3;
+    top: 50%; /* Vertical center */
+    left: 0; /* Align to left */
+    transform: translateY(-50%); /* Only shift vertically */
+    background: none;
+    width: 80%;
+    height: auto;
+    color: white;
+    opacity: 0;
+    transition: all 2s ease;
+    text-align: left; /* Align text to the left */
+    padding-left: 5%; /* Optional: add some spacing from the left edge */
+  }
 
-/* This class is added after page load */
-.home-data.show {
-  opacity: 1;
-}
-
-
+  /* This class is added after page load */
+  .home-data.show {
+    opacity: 1;
+  }
 
   .home-data h1 {
     background: none;
@@ -1001,89 +991,83 @@ span {
     padding-bottom: 10px;
   }
 
-.hand {
-  width: 100vw;
-  overflow: hidden;
-  position: relative;
-  display: inline-block;
-}
+  .hand {
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+  }
 
-.hand img {
-  display: block;
-  width: 100%;
+  .hand img {
+    display: block;
+    width: 100%;
+  }
+
+  .overlayx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0); /* initial black with 0.5 opacity */
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .overlayxx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* initial black with 0.5 opacity */
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .hand:hover .overlayxx,
+  .overlayx:hover .overlayxx {
+    background-color: rgba(0, 0, 0, 0); /* initial black with 0.5 opacity */
+  }
+
+  .overlayx p {
+    background: none;
+    color: white;
+    text-align: center;
+    padding: 50px 25px;
+    font-size: 2vw;
+  }
+
+  .overlayx h2 {
+    background: none;
+    color: white;
+    text-align: center;
+    padding: 0 15px;
+    font-size: 3.2vw;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+
+  .cdcd {
+    background-color: #721e83;
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 10px;
+    margin-top: 25px;
+  }
+
+  .cdcd a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.8vw;
+    font-weight: 600;
+  }
 }
 
 .overlayx {
-  position: absolute;  
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0); /* initial black with 0.5 opacity */
-  transition: opacity 0.3s ease-in-out;
-}
-
-.overlayxx {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4); /* initial black with 0.5 opacity */
-  transition: opacity 0.3s ease-in-out;
-}
-
-.hand:hover .overlayxx, .overlayx:hover .overlayxx {
-  background-color: rgba(0, 0, 0, 0); /* initial black with 0.5 opacity */
-}
-
-
-.overlayx p{
-  background: none;
-  color: white;
-  text-align: center;
-  padding: 50px 25px;
-  font-size: 2.4vw;
-}
-
-.overlayx h2{
-  background: none;
-  color: white;
-  text-align: center;
-  padding: 0 15px;
-  font-size: 4vw;
-  font-weight: 600;
-  margin-top: 10px;
-}
-
-.cdcd{
-  background-color: #721e83;
-  padding: 10px 20px;
-  border: 0;
-  border-radius: 10px;
-  margin-top: 25px;
-}
-
-.cdcd a{
-  text-decoration: none;
-  color: white;
-  font-size: 3vw;
-  font-weight: 600;
-}
-
-
-
-
-
-}
-
-
-.overlayx{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-font-family: Arial, Helvetica, sans;
+  font-family: Arial, Helvetica, sans;
 }
 
 .c10 {
@@ -1099,7 +1083,32 @@ footer {
   background-color: black;
   padding-top: 40px;
   margin-bottom: 0;
-  margin-top: -7px;
+  margin-top: -7px;  
   padding-bottom: 60px;
   position: relative;
+}
+
+@keyframes fontGrow {
+  0% {
+    font-size: 130%;
+    opacity: 0; 
+  }
+
+  50%{
+    font-size: 100%;
+    opacity: 0.5;
+  }
+
+  100% {
+    font-size: 110%; 
+    opacity: 1;
+  }
+}
+
+footer h1,
+footer a,
+footer p,
+footer span,
+footer i {
+  animation: fontGrow 3s ease-in;
 }
