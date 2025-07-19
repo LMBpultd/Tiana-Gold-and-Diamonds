@@ -604,17 +604,16 @@ span {
   }
 
   .home {
-    width: 100vw;
-    height: 80vh;
-    overflow: hidden;
-    position: relative;
-  }
-
-  .home img {
-    width: 100%;
-    position: absolute;
-    top: -40%;
-    z-index: 1;
+    background-image: url('/images/index/home.png'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Full screen height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
   }
 
   #mob-v {
@@ -1110,5 +1109,5 @@ footer a,
 footer p,
 footer span,
 footer i {
-  animation: fontGrow 3s ease-in;
+  animation: fontGrow 2s ease-in; 
 }

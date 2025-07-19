@@ -61,7 +61,6 @@
     </div>
 
     <div class="home">
-      <img src="images/index/home.png" id="desk-v" />
       <img src="images/index/home-mob.png" id="mob-v" />
       <div class="h0overlay"></div>
       <div class="home-data">
@@ -251,14 +250,19 @@
 
 </div>
 
-<span id="copy">Copyright © 2025 Tiana Gold and Diamonds  | All Rights Reserved.</span>
+<span id="copy">Copyright © <span id="year"></span> Tiana Gold and Diamonds  | All Rights Reserved.</span>
 
 <div class="mcopy">
 
-  <p id="mcopy">Copyright © 2025 Tiana Gold and Diamonds  | All Rights Reserved.</>
+  <p id="mcopy">Copyright © <span id="year"></span> Tiana Gold and Diamonds  | All Rights Reserved.</p>
 
 
 </div>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 
 
     </footer>
