@@ -117,82 +117,14 @@
   </div>
 
 
-  <div class="gallerydiv">
-
-<!--
-
-    <div class="gds"><img src="images/Gallery/a.jpg"></div>
-    <div class="gds"><img src="images/Gallery/b.jpg"></div>
-    <div class="gds"><img src="images/Gallery/c.jpg"></div>
-    <div class="gds"><img src="images/Gallery/d.jpg"></div>
-    <div class="gds"><img src="images/Gallery/e.jpg"></div>
-    <div class="gds"><img src="images/Gallery/f.jpg"></div>
-    <div class="gds"><img src="images/Gallery/g.jpg"></div>
-
--->
-    <div class="gds"><img src="images/Gallery/1.webp"></div>
-    <div class="gds"><img src="images/Gallery/2.webp"></div>
-    <div class="gds"><img src="images/Gallery/3.webp"></div>
-    <div class="gds"><img src="images/Gallery/4.webp"></div>
-    <div class="gds"><img src="images/Gallery/5.webp"></div>
-    <div class="gds"><img src="images/Gallery/6.webp"></div>
-    <div class="gds"><img src="images/Gallery/7.webp"></div>
-    <div class="gds"><img src="images/Gallery/8.webp"></div>
-
-
-    <div class="gds"><img src="images/Gallery/1.jpg"></div>
-    <div class="gds"><img src="images/Gallery/2.jpg"></div>
-    <div class="gds"><img src="images/Gallery/3.jpg"></div>
-    <div class="gds"><img src="images/Gallery/4.jpg"></div>
-    <div class="gds"><img src="images/Gallery/5.jpg"></div>
-    <div class="gds"><img src="images/Gallery/6.jpg"></div>
-    <div class="gds"><img src="images/Gallery/7.jpg"></div>
-    <div class="gds"><img src="images/Gallery/8.jpg"></div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <div class="gallerydiv" id="dynamic-gallery">
   </div>
+  
+  <!-- പാജിനേഷൻ ബട്ടണുകൾ വരാനുള്ള സെക്ഷൻ -->
+  <div id="pagination-controls" class="pagination"></div>
 
+  <!-- പുതിയ ഗാലറി ജാവാസ്ക്രിപ്റ്റ് ഫയൽ ലോഡ് ചെയ്യുന്നു -->
+  <script src="js/gallery.js"></script>
 
   <!-- Modal viewer -->
   <div id="imageModal" class="modal">
@@ -200,22 +132,23 @@
     <img class="modal-content" id="modalImg">
   </div>
 
-
   <script>
     if (window.innerWidth >= 1000) {
       const modal = document.getElementById("imageModal");
       const modalImg = document.getElementById("modalImg");
       const closeBtn = document.querySelector(".close");
+      const galleryContainer = document.getElementById("dynamic-gallery");
 
       let scale = 1;
 
-      document.querySelectorAll(".gds img").forEach(img => {
-        img.addEventListener("click", () => {
+      // Event Delegation: പുതിയ ചിത്രങ്ങൾ വരുമ്പോഴും സൂം ഫീച്ചർ വർക്ക് ചെയ്യാൻ
+      galleryContainer.addEventListener("click", (e) => {
+        if (e.target.tagName === "IMG") {
           modal.style.display = "flex";
-          modalImg.src = img.src;
+          modalImg.src = e.target.src;
           scale = 1; // Reset zoom
           modalImg.style.transform = `scale(${scale})`;
-        });
+        }
       });
 
       closeBtn.addEventListener("click", () => {
@@ -251,68 +184,49 @@
 
 
   <footer>
-
-    <div class="qcl" id="x">
-
-      <h1>Quick Links</h1>
-
-      <a href="index.html">Home</a>
-      <a href="About.html">About Us</a>
-      <a href="Gallery.html">Gallery</a>
-      <a href="Contact.html">Contact</a>
-    </div>
-
-
-    <div id="x">
-      <h1>Business Hours</h1>
-      <p id="bst" style="color: white;">10.00 Am - 7.00 Pm</p>
-    </div>
-
-
-    <div id="y">
-      <h1 id="xcv">Tiana Gold and Diamonds</h1>
-
-      <a><i class="fas fa-map-marker-alt icon-outline"> <span>College Rd, Kothamangalam, Kerala 686691</span> </i></a>
-      <a href="tel:+919645522916"><i class="fas fa-phone icon-outline"><span>+91 96455 22916</span></i></a>
-      <a href="https://mail.google.com/mail/?view=cm&to=tianaklmtower@gmail.com" target="_blank"><i
-          class="fas fa-envelope icon-outline"><span> tianaklmtower@gmail.com </span></i></a>
-      <a href="https://maps.app.goo.gl/LbqQLvwL2xSKGuHf8"><i
-          class="fas fa-paperclip icon-outline"><span>Navigate</span></i></a>
-
-
-    </div>
-
-
-    <div id="x" class="zzz">
-
-      <h1>Google Reviews</h1>
-
-      <div class="stars">
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
+      <div class="qcl" id="x">
+        <h1>Quick Links</h1>
+        <a href="index.html">Home</a>
+        <a href="About.html">About Us</a>
+        <a href="Gallery.html">Gallery</a>
+        <a href="Contact.html">Contact</a>
       </div>
 
-      <button class="Reviews"><a href="https://g.page/r/CUU1-99CFYy0EBM/review">REVIEW US</a></buttonclass>
+      <div id="x">
+        <h1>Business Hours</h1>
+        <p id="bst" style="color: white;">10.00 Am - 7.00 Pm</p>
+      </div>
 
-    </div>
+      <div id="y">
+        <h1 id="xcv">Tiana Gold and Diamonds</h1>
+        <a><i class="fas fa-map-marker-alt icon-outline"></i> <span style="line-height: 1.5; margin-left: 0;">KLM Tower, College Road Kothamangalam<br>Kerala, 686691</span></a>
+        <a href="tel:+919645522916"><i class="fas fa-phone icon-outline"></i> <span style="margin-left: 0;">+91 96455 22916</span></a>
+        <a href="https://mail.google.com/mail/?view=cm&to=tianaklmtower@gmail.com" target="_blank"><i class="fas fa-envelope icon-outline"></i> <span style="margin-left: 0;">tianaklmtower@gmail.com</span></a>
+        <a href="https://maps.app.goo.gl/LbqQLvwL2xSKGuHf8"><i class="fas fa-paperclip icon-outline"></i> <span style="margin-left: 0;">Navigate</span></a>
+      </div>
 
+      <div class="zzz" id="x">
+        <h1>Google Reviews</h1>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <button class="Reviews"><a href="https://g.page/r/CUU1-99CFYy0EBM/review">REVIEW US</a></button>
+      </div>
 
-    <span id="copy">Copyright © <span id="year"></span> Tiana Gold and Diamonds | All Rights Reserved.</span>
+      <span id="copy">Copyright © <span id="year"></span> Tiana Gold and Diamonds | All Rights Reserved.</span>
 
-    <div class="mcopy">
+      <div class="mcopy">
+        <p id="mcopy" style="line-height: 1.6;">Copyright © <span id="year"></span> Tiana Gold and Diamonds <br> All Rights Reserved.</p>
+      </div>
 
-      <p id="mcopy">Copyright © <span id="year"></span> Tiana Gold and Diamonds | All Rights Reserved.</p>
-
-
-    </div>
-
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-  </footer>
+      <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+      </script>
+    </footer>
 
 
   <div class="xfab-container" id="xfabContainer" aria-label="floating action buttons">

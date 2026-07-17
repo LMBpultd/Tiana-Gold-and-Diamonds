@@ -96,16 +96,7 @@
     text-align: justify;
   }
 
-  .h1 h1 {
-    text-align: center;
-    font-weight: 550;
-    font-size: 35px;
-    margin-bottom: 30px;
-    font-family: "DM Sans", sans-serif;
-    line-height: 1.4;
-    transform: scaleY(1.15);
-    margin-top: 45px;
-  }
+
   .h1 p {
     font-size: 19px;
   }
@@ -375,10 +366,16 @@
 
   #y a {
     margin: 5px;
+    display: flex;
+    align-items: flex-start; 
+    gap: 10px; 
+    color: white; /* നീല നിറം മാറ്റാൻ ഇത് സഹായിക്കും */
+    text-decoration: none; /* അടിയിൽ വരുന്ന വര (underline) ഒഴിവാക്കാൻ */
   }
 
   #y i {
     margin-left: 5px;
+    margin-top: 4px; /* ഐക്കൺ കൃത്യമായി അലൈൻ ചെയ്യാൻ */
     font-size: 22px;
   }
 
@@ -402,23 +399,44 @@
     margin-bottom: 30px;
   }
 
+  .h1 h1 {
+    text-align: center;
+    font-weight: 550;
+    font-size: 26px; 
+    margin-bottom: 30px;
+    font-family: "DM Sans", sans-serif;
+    line-height: 1.4;
+    transform: scaleY(1.15);
+    margin-top: 45px;
+  }
   .Reviews {
-    min-height: 30px;
+    min-height: 40px;
     background-color: #740e88;
     width: fit-content;
-    margin-left: 25px;
-    margin-top: 25px;
-    padding: 10px 20px 5px 0;
+    margin-left: 40px;
+    margin-top: 22px;
     border: 0;
-    border-radius: 10px;
+    padding-top: 7px;
+    padding-right: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   }
 
+  #x .Reviews a,
   .Reviews a {
-    font-weight: 600;
+    font-weight: 700 !important;
+    color: #ffffff !important; 
+    text-decoration: none !important;
+    font-size: 16px !important;
+    letter-spacing: 1px;
+    display: inline-block !important;
   }
 
   .Reviews:hover {
-    background-color: black;
+    background-color: #5c0b6c; 
+    transform: translateY(-3px); 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   }
 
   #copy {
@@ -442,19 +460,24 @@
 
   .hand {
     position: relative;
-    display: inline-block;
     width: 100vw;
+    min-height: 450px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
     margin-bottom: 0;
     padding-bottom: 0;
   }
   .hand img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
     display: block;
-    transform: translate(-18.4%, 0%);
     margin-bottom: 0;
     padding-bottom: 0;
   }
@@ -501,7 +524,7 @@
     background-color: #721e83;
     padding: 10px 20px;
     border: 0;
-    margin-top: 25px;
+    margin-top: 20px;
   }
 
   .cdcd a {
@@ -686,6 +709,8 @@ span {
     margin-left: 5vw;
     display: flex;
     flex-direction: row;
+    align-items: center; /* വെർട്ടിക്കൽ ആയി സെന്റർ ചെയ്യുന്നു */
+    justify-content: space-between;
   }
   .h1 {
     width: 45vw;
@@ -724,9 +749,11 @@ span {
 
   .collection h1 {
     text-align: center;
-    font-size: 5.5vw;
+    font-size: 3.5vw; /* ഫോണ്ട് സൈസ് കുറച്ചു */
     margin-top: 70px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    font-weight: 600;
+    letter-spacing: 1px;
   }
 
   .bgs {
@@ -747,21 +774,33 @@ span {
   .c2 img {
     width: 70%;
     margin-bottom: 25px;
+    border-radius: 10px; /* ബോർഡർ റൗണ്ട് ചെയ്തു */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* ചെറിയൊരു ഷാഡോ നൽകി */
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* ആനിമേഷൻ നൽകി */
+  }
+
+  /* Hover ചെയ്യുമ്പോഴുള്ള എഫക്റ്റ് */
+  .c1 img:hover,
+  .c2 img:hover {
+    transform: scale(1.05); /* മൗസ് വെക്കുമ്പോൾ ചിത്രം അല്പം വലുതാകും */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* ഷാഡോ കൂടും */
   }
 
   .c1-d h2,
   .c2-d h2 {
-    font-size: 3vw;
-    padding-bottom: 45px;
+    font-size: 2.2vw; /* ഫോണ്ട് സൈസ് കുറച്ചു */
+    padding-bottom: 25px;
     padding-top: 20px;
+    font-weight: 600;
   }
 
   .c1-d p,
   .c2-d p {
-    font-size: 1.3vw;
+    font-size: 1.1vw; /* ഫോണ്ട് സൈസ് അല്പം കുറച്ചു */
     width: 80%;
     margin-left: 10%;
-    color: rgb(152, 105, 196);
+    color: rgb(120, 80, 160); /* നിറം അല്പം ഡാർക്ക് ആക്കി */
+    line-height: 1.6; /* വരികൾ തമ്മിലുള്ള അകലം കൂട്ടി കൂടുതൽ വ്യക്തത വരുത്തി */
   }
 
   .con {
@@ -782,31 +821,7 @@ span {
     background-color: rgb(169, 170, 172);
   }
 
-  .custom {
-    width: 90vw;
-    margin-left: 5vw;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 0;
-    margin-bottom: 80px;
-  }
-
-  .custtm1 {
-    width: 45vw;
-    position: relative;
-    aspect-ratio: 16 / 9; /* Let the container control the ratio */
-    overflow: hidden;
-  }
-
-  .custtm1 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Better than 'fill' for most cases */
-    display: block;
-  }
-
-  .overlay {
+    .overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -834,16 +849,40 @@ span {
     background-color: rgba(0, 0, 0, 0);
   }
 
-  .cust-hd {
-    width: 44vw;
-    height: 400px;
+  .custom {
+    width: 90vw;
+    margin-left: 5vw;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: stretch; /* രണ്ട് ഭാഗങ്ങൾക്കും തുല്യമായ ഹൈറ്റ് നൽകുന്നു */
+    gap: 0;
+    margin-bottom: 80px;
+  }
+
+  .custtm1 {
+    width: 50%; /* കൃത്യമായി 50% വീതി */
+    position: relative;
+    overflow: hidden;
+    display: flex; /* ചിത്രം ഫുൾ ആയി വരാൻ */
+  }
+
+  .custtm1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+  }
+
+  .cust-hd {
+    width: 50%; /* കൃത്യമായി 50% വീതി */
+    display: grid; /* ഗ്രിഡ് ഉപയോഗിച്ച് തുല്യമായ 4 ഭാഗങ്ങളാക്കുന്നു */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
   }
 
   .custtm {
-    width: 50%;
-    height: 50%;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
     position: relative;
   }
@@ -880,6 +919,7 @@ span {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: center; /* വരികളെയും ചിത്രങ്ങളെയും നേരെ നടുവിൽ നിർത്തുന്നു */
   }
 
   .uni-img {
@@ -924,30 +964,11 @@ span {
     padding: 0 10px;
   }
 
-  #x h1,
-  #y h1 {
-    font-weight: 650;
-    margin-bottom: 20px;
-    font-family: "Poppins", sans-serif;
-    font-size: 2vw;
-    background: none;
-  }
-
   .zzz h1 {
     padding-bottom: 20px;
   }
 
-  #x a {
-    font-size: 1.3vw;
-    margin-left: 20px;
-    margin-bottom: 20px;
-  }
-
-  #bst {
-    text-align: center;
-    margin-left: -20px;
-    font-size: 1.6vw;
-  }
+  
 
   #x i {
     margin-bottom: 15px;
@@ -957,8 +978,50 @@ span {
     width: fit-content;
   }
 
+ #x h1,
+  #y h1 {
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.6vw; /* സൈസ് ക്രമീകരിച്ചു */
+    letter-spacing: 1px;
+    background: none;
+  }
+
+  #x a {
+    font-size: 1.1vw; /* സൈസ് കുറച്ചു */
+    margin-left: 20px;
+    margin-bottom: 15px;
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease; /* ആനിമേഷൻ ചേർക്കുന്നു */
+  }
+
+  #x a:hover {
+    color: #b78dd5;
+    transform: translateX(5px); /* Hover ചെയ്യുമ്പോൾ വലത്തോട്ട് നീങ്ങുന്നു */
+  }
+
+  #bst {
+    text-align: center;
+    margin-left: 0;
+    font-size: 1.2vw;
+  }
+
   #y a {
     margin: 7px 15px;
+    font-size: 1.1vw;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px; /* ഐക്കണും ടെക്സ്റ്റും തമ്മിലുള്ള അകലം */
+  }
+
+  #y i {
+    margin-top: 4px; /* ഐക്കൺ ടെക്സ്റ്റിനൊപ്പം നേരെ നിൽക്കാൻ */
+  }
+
+  #y a:hover {
+    color: #b78dd5;
   }
 
   .stars,
@@ -969,23 +1032,33 @@ span {
   }
 
   .Reviews {
-    min-height: 30px;
+    min-height: 40px;
     background-color: #740e88;
     width: fit-content;
     margin-top: 25px;
-    padding: 18px 15px 0px 0px;
-    /* top right bottom left */
+    padding-top: 15px;
+    padding-right: 20px;
     border: 0;
-    border-radius: 10px;
+    border-radius: 8px;
     text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   }
 
+  #x .Reviews a,
   .Reviews a {
-    font-weight: 600;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    font-size: 16px !important;
+    letter-spacing: 1px;
+    display: inline-block !important;
   }
 
   .Reviews:hover {
-    background-color: black;
+    background-color: #5c0b6c;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
   }
 
   .zzz {
@@ -1051,6 +1124,7 @@ span {
     text-align: center;
     padding: 50px;
     font-size: 2vw;
+    transition: transform 0.4s ease; /* ആനിമേഷൻ ചേർക്കുന്നു */
   }
 
   .overlayx h2 {
@@ -1061,6 +1135,16 @@ span {
     font-size: 3.2vw;
     font-weight: 600;
     margin-top: 10px;
+    transition: transform 0.4s ease; /* ആനിമേഷൻ ചേർക്കുന്നു */
+  }
+
+  /* Hover ചെയ്യുമ്പോഴുള്ള എഫക്റ്റ് */
+  .overlayx:hover h2 {
+    transform: scale(1.05);
+  }
+  
+  .overlayx:hover p {
+    transform: scale(1.02);
   }
 
   .cdcd {
