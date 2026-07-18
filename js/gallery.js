@@ -1,4 +1,20 @@
 const mediaFiles = [
+  "14.jpeg"
+  "15.jpeg"
+  "17.jpeg"
+  "16.jpeg"
+  "18.jpeg"
+  "19.jpeg"
+  "11.jpeg"
+  "12.jpeg"
+  "24.jpeg"
+  "29.jpeg"
+  "30.jpeg"
+  "20.jpeg"
+  "31.jpeg"
+  "21.jpeg"
+  "22.jpeg"
+  "13.jpeg"
   "1.webp",
   "2.webp",
   "3.webp",
