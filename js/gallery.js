@@ -9,10 +9,6 @@ const latestCreationsFiles = [
 
 // --- MAIN GALLERY ITEMS (TITLE PORTION REMOVED) ---
 const galleryItems = [
-  { file: "100.png", category: "earrings" },
-  { file: "101.png", category: "earrings" },
-  { file: "102.png", category: "earrings" },
-  { file: "103.png", category: "earrings" },
   { file: "1.png", category: "necklace" },
   { file: "2.png", category: "pendants" },
   { file: "3.png", category: "comboset" },

@@ -57,10 +57,12 @@ a {
   align-items: center;
   justify-content: space-between;
   padding: 0 4vw;
-  background: #ffffff;
-  position: relative;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
   z-index: 100;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: none;
 }
 
 .loggo-desk img {
@@ -71,71 +73,79 @@ a {
 #deskmenu {
   display: flex;
   align-items: center;
-  gap: 25px;
-}
-
-#deskmenu {
-  display: flex;
-  align-items: center;
-  gap: 32px;
+  gap: 34px;
+  margin-top: 30px;
 }
 
 .menu-btnn {
-  background: none;
-  border: none;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: 20px;
   font-family: "Poppins", sans-serif;
-  font-size: 14.5px;
-  font-weight: 500;
-  letter-spacing: 1.5px;
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  color: #2b262d;
-  cursor: pointer;
-  padding: 8px 0;
+  padding: 7px 18px;
   position: relative;
-  transition: color 0.3s ease;
-}
-
-/* Elegant expanding gold underline on hover */
-.menu-btnn::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, #d4af37 0%, #aa820a 100%);
-  transition: width 0.35s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Metallic Golden Gradient Text */
+  background-image: linear-gradient(135deg, #fff7d6 0%, #dfb552 45%, #b38220 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.5));
 }
 
 .menu-btnn:hover,
 .menu-btnn.active-nav {
-  color: #aa820a;
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 215, 0, 0.85);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(212, 175, 55, 0.4);
+  
+  background-image: linear-gradient(135deg, #ffffff 0%, #fae190 50%, #c9962e 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.menu-btnn:hover::after,
-.menu-btnn.active-nav::after {
-  width: 100%;
+/* Remove default underline if using capsule button style */
+.menu-btnn::after {
+  display: none;
 }
 
 #desk-c-c {
-  background-color: var(--accent-purple);
-  padding: 10px 22px;
-  border: none;
-  border-radius: 8px;
+  background: linear-gradient(135deg, #c59b3f 0%, #fae292 50%, #b38424 100%);
+  padding: 10px 24px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 30px;
   cursor: pointer;
-  transition: all var(--transition-duration) ease;
+  margin-top: 130px;
+  box-shadow: 0 4px 15px rgba(179, 132, 36, 0.35);
+  transition: all 0.35s ease;
+  backdrop-filter: blur(4px);
 }
 
 #desk-c-c a {
-  color: #ffffff;
-  font-weight: 600;
-  font-size: 15px;
+  color: #241708;
+  font-weight: 700;
+  font-size: 14.5px;
+  letter-spacing: 0.8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 #desk-c-c:hover {
-  background: linear-gradient(90deg, #8e2de2 0%, #ff267a 100%);
-  box-shadow: 0 4px 12px rgba(142, 45, 226, 0.2);
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #d8ab48 0%, #fff0b3 50%, #c4922b 100%);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.55);
 }
 
 /* --- HERO SECTION --- */
@@ -143,14 +153,16 @@ a {
   position: relative;
   width: 100%;
   height: 75vh;
-  min-height: 480px;
+  min-height: 520px;
   background-image: url("../images/index/home.png");
   background-size: cover;
-  background-position: center;
+  background-position: center top;
   background-repeat: no-repeat;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   overflow: hidden;
+  padding-top: 90px;
+  padding-bottom: 45px;
 }
 
 #mob-v {
@@ -184,91 +196,150 @@ a {
 }
 
 .home-data h1 {
-  font-size: clamp(32px, 4.5vw, 56px);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(34px, 4.8vw, 62px);
   font-weight: 700;
   line-height: 1.2;
+  letter-spacing: 1px;
+  background: linear-gradient(135deg, #ffffff 0%, #fbf3d5 25%, #d4af37 60%, #aa820a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.45));
 }
 
 .home-data p {
   font-size: clamp(16px, 1.8vw, 22px);
-  margin: 20px 0 35px 0;
+  margin: 12px 0 26px 0;
   max-width: 650px;
+  color: #f7eed8;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 #hcc {
-  background-color: var(--primary-purple);
-  border: none;
-  border-radius: 6px;
-  padding: 12px 28px;
+  background: linear-gradient(135deg, #caa146 0%, #e8cb75 50%, #b88a28 100%);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 25px;
+  padding: 12px 32px;
   cursor: pointer;
-  transition: background-color var(--transition-duration) ease;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+  transition: all 0.35s ease;
 }
 
 #hcc a {
-  color: #ffffff;
-  font-size: 16px;
-  font-weight: 600;
+  color: #1f160b;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 #hcc:hover {
-  background-color: var(--hover-purple);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(212, 175, 55, 0.5);
+  background: linear-gradient(135deg, #d8b257 0%, #fae292 50%, #c99933 100%);
 }
 
 /* --- SECTION 1: ABOUT OVERVIEW --- */
 .home1 {
   width: 90%;
-  max-width: 1200px;
-  margin: 70px auto;
+  max-width: 1220px;
+  margin: 85px auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 40px;
+  gap: 55px;
 }
 
 .h1 {
-  flex: 1;
+  flex: 1.1;
   text-align: left;
 }
 
 .h1 h1 {
-  font-size: clamp(24px, 2.5vw, 36px);
-  font-family: "DM Sans", sans-serif;
-  font-weight: 700;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(28px, 3vw, 42px);
+  font-weight: 600;
   line-height: 1.3;
+  color: #1f1b20;
+  letter-spacing: 0.5px;
   margin-bottom: 20px;
-  color: #222;
+  position: relative;
+  padding-bottom: 18px;
+}
+
+/* Elegant gold accent underline */
+.h1 h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 65px;
+  height: 2.5px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #b88a28 0%, #fae292 60%, #cca43b 100%);
+  box-shadow: 0 2px 6px rgba(212, 175, 55, 0.4);
 }
 
 .h1 p {
-  font-size: 16px;
-  line-height: 1.8;
-  color: #555;
+  font-family: "Poppins", sans-serif;
+  font-size: 15.5px;
+  line-height: 1.9;
+  color: #5c5560;
+  font-weight: 400;
+  margin-top: 10px;
 }
 
 .h2 {
-  flex: 1;
+  flex: 0.9;
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
+/* Luxury jewelry showcase frame */
 .h2 img {
   width: 100%;
-  max-width: 500px;
+  max-width: 480px;
+  border-radius: 20px;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08), 0 4px 15px rgba(184, 138, 40, 0.12);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.h2:hover img {
+  transform: translateY(-4px) scale(1.015);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12), 0 6px 20px rgba(212, 175, 55, 0.25);
 }
 
 /* --- SECTION 2: COLLECTION --- */
 .collection {
   width: 100%;
-  padding: 40px 0 80px 0;
-  background-color: #faf8f5;
+  padding: 60px 0 90px 0;
+  background: radial-gradient(circle at top, #faf7f2 0%, #f4ede4 100%);
 }
 
 .collection > h1 {
   text-align: center;
-  font-size: clamp(28px, 3vw, 42px);
-  margin-bottom: 50px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(30px, 3.2vw, 44px);
   font-weight: 600;
-  color: #222;
+  letter-spacing: 1px;
+  color: #1f1a24;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+/* Elegant golden diamond ornament under title */
+.collection > h1::after {
+  content: "✦";
+  display: block;
+  font-size: 14px;
+  color: #c59b3f;
+  margin-top: 10px;
+  letter-spacing: 3px;
 }
 
 .bgs {
@@ -277,18 +348,26 @@ a {
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
+  gap: 35px;
 }
 
 .c10 {
   background: #ffffff;
-  border-radius: 12px;
-  padding: 30px 20px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border-radius: 18px;
+  padding: 35px 25px;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04), 0 4px 12px rgba(184, 138, 40, 0.08);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.c10:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08), 0 6px 20px rgba(184, 138, 40, 0.18);
+  border-color: rgba(212, 175, 55, 0.5);
 }
 
 .c1,
@@ -297,76 +376,94 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  border-radius: 12px;
 }
 
 .c1 img,
 .c2 img {
   width: 100%;
-  max-width: 300px;
+  max-width: 320px;
   aspect-ratio: 4 / 3;
   object-fit: cover;
-  margin: 0 auto 20px auto;
-  border-radius: 8px;
+  margin: 0 auto 24px auto;
+  border-radius: 12px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
   display: block;
-  transition: transform 0.4s ease;
+  transition: transform 0.5s ease;
 }
 
-.c1 img:hover,
-.c2 img:hover {
-  transform: scale(1.04);
+.c10:hover .c1 img,
+.c10:hover .c2 img {
+  transform: scale(1.05);
 }
 
 .c1-d h2,
 .c2-d h2 {
-  font-size: clamp(20px, 2vw, 26px);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(22px, 2.2vw, 28px);
+  font-weight: 600;
+  letter-spacing: 0.5px;
   margin-bottom: 12px;
-  color: #222;
+  color: #231c26;
 }
 
 .c1-d p,
 .c2-d p {
-  font-size: 15px;
-  line-height: 1.6;
-  color: var(--dark-gold);
+  font-family: "Poppins", sans-serif;
+  font-size: 14.5px;
+  line-height: 1.75;
+  color: #635860;
   margin-bottom: 25px;
+  max-width: 440px;
 }
 
+/* Luxury Gold Contact Button */
 .con {
-  background-color: #000000;
-  border: none;
-  padding: 10px 24px;
-  border-radius: 6px;
+  background: linear-gradient(135deg, #caa146 0%, #e8cb75 50%, #b88a28 100%);
+  border: 1px solid rgba(255, 235, 175, 0.6);
+  padding: 10px 30px;
+  border-radius: 25px;
   cursor: pointer;
-  transition: background-color var(--transition-duration) ease;
+  box-shadow: 0 4px 15px rgba(184, 138, 40, 0.25);
+  transition: all 0.35s ease;
 }
 
 .con a {
-  color: #ffffff;
-  font-size: 15px;
-  font-weight: 600;
+  color: #24190c;
+  font-family: "Poppins", sans-serif;
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .con:hover {
-  background-color: var(--primary-purple);
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #d8b257 0%, #fae292 50%, #c99933 100%);
+  box-shadow: 0 6px 20px rgba(184, 138, 40, 0.4);
 }
 
 /* --- SECTION 3: CUSTOM CREATIONS --- */
 .custom {
   width: 90%;
-  max-width: 1200px;
-  margin: 40px auto;
+  max-width: 1220px;
+  margin: 60px auto 30px auto;
   display: flex;
-  gap: 15px;
+  gap: 20px;
   align-items: stretch;
 }
 
 .custtm1 {
-  flex: 1;
+  flex: 1.1;
   position: relative;
-  border-radius: 10px;
+  border-radius: 16px;
   overflow: hidden;
   display: block;
   width: 100%;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .custtm1 img {
@@ -374,26 +471,55 @@ a {
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.6s ease;
+}
+
+.custtm1:hover img {
+  transform: scale(1.04);
 }
 
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: radial-gradient(circle at center, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.45) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 20px;
   transition: background-color 0.4s ease;
 }
 
+/* Royal Golden Badge Styling */
 .overlay h1 {
-  color: #ffffff;
-  font-size: clamp(22px, 2.5vw, 36px);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(24px, 2.6vw, 38px);
+  font-weight: 700;
+  letter-spacing: 1.5px;
   text-align: center;
+  padding: 14px 28px;
+  border-radius: 40px;
+  background: rgba(20, 15, 20, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(212, 175, 55, 0.6);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  
+  /* Metallic Golden Gradient Text */
+  background-image: linear-gradient(135deg, #ffffff 0%, #fae190 40%, #d4af37 75%, #aa820a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.4s ease;
 }
 
 .custtm1:hover .overlay {
-  background: rgba(0, 0, 0, 0.15);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.custtm1:hover .overlay h1 {
+  transform: scale(1.05);
+  border-color: #f7e096;
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
 }
 
 .cust-hd {
@@ -401,99 +527,198 @@ a {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  gap: 15px;
+  gap: 18px;
 }
 
 .custtm {
-  border-radius: 8px;
+  border-radius: 14px;
   overflow: hidden;
   height: 100%;
-  min-height: 180px;
+  min-height: 190px;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
 }
 
 .custtm img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s ease;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.custtm:hover {
+  transform: translateY(-4px);
+  border-color: rgba(212, 175, 55, 0.7);
+  box-shadow: 0 12px 28px rgba(184, 138, 40, 0.2);
 }
 
 .custtm:hover img {
-  transform: scale(1.05);
+  transform: scale(1.06);
 }
 
 .bt {
-  width: 100%;
+  width: 90%;
+  max-width: 1200px;
+  margin: 50px auto;
   display: flex;
+  align-items: center;
   justify-content: center;
-  margin: 40px 0;
+  gap: 24px;
+}
+
+/* Randu vashangalilum ulla attractive golden gradient lines */
+.bt::before,
+.bt::after {
+  content: "";
+  flex: 1;
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent, #d4af37, transparent);
+  opacity: 0.75;
 }
 
 #bt {
-  background-color: var(--primary-purple);
-  border: none;
-  padding: 12px 30px;
-  border-radius: 6px;
+  position: relative;
+  background: linear-gradient(135deg, #caa146 0%, #e8cb75 50%, #b88a28 100%);
+  border: 1px solid rgba(255, 235, 175, 0.6);
+  padding: 13px 34px;
+  border-radius: 30px;
   cursor: pointer;
-  transition: background-color var(--transition-duration) ease;
+  box-shadow: 0 4px 18px rgba(184, 138, 40, 0.28);
+  transition: all 0.35s ease;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 #bt a {
-  color: #ffffff;
-  font-size: 15px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
+  color: #2a1f10;
+  font-family: "Poppins", sans-serif;
+  font-size: 14.5px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+/* Elegant light sheen/shimmer effect on hover */
+#bt::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.5),
+    transparent
+  );
+  transform: skewX(-25deg);
+  transition: 0.6s ease;
 }
 
 #bt:hover {
-  background-color: var(--hover-purple);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(184, 138, 40, 0.45);
+  background: linear-gradient(135deg, #d8b257 0%, #fae292 50%, #c99933 100%);
+}
+
+#bt:hover::after {
+  left: 140%;
 }
 
 /* --- SECTION 4: UNIQUE STATEMENT --- */
 .uniq {
-  width: 90%;
-  max-width: 1200px;
-  margin: 70px auto;
+  width: 92%;
+  max-width: 1240px;
+  margin: 90px auto;
+  padding: 50px 35px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 35px;
+  background: radial-gradient(circle at center, #ffffff 0%, #faf8f5 100%);
+  border-radius: 20px;
+  border: 1px solid rgba(212, 175, 55, 0.22);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
 }
 
 .uni-img {
-  width: 25%;
-  max-width: 260px;
+  width: 24%;
+  max-width: 250px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  box-shadow: 0 8px 24px rgba(184, 138, 40, 0.12);
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
+}
+
+.uni-img:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 14px 30px rgba(184, 138, 40, 0.22);
 }
 
 .uni-data {
   flex: 1;
   text-align: center;
+  padding: 0 20px;
 }
 
 .uni-data h1 {
-  font-size: clamp(22px, 2.2vw, 32px);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(24px, 2.6vw, 36px);
   font-weight: 600;
-  color: #222;
-  margin-bottom: 15px;
+  color: #221d23;
+  line-height: 1.35;
+  letter-spacing: 0.5px;
+  margin-bottom: 18px;
+}
+
+/* Elegant golden ornament line beneath title */
+.uni-data br {
+  display: none;
+}
+
+.uni-data h1::after {
+  content: "♦";
+  display: block;
+  font-size: 13px;
+  color: #d4af37;
+  margin: 14px auto 16px auto;
+  position: relative;
+  width: 130px;
+  text-align: center;
+}
+
+.uni-data h1::before {
+  content: "";
+  display: block;
 }
 
 .uni-data p {
-  font-size: 15px;
-  line-height: 1.7;
-  color: #666;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(14px, 1.1vw, 16px);
+  line-height: 1.85;
+  color: #635b66;
+  max-width: 640px;
+  margin: 0 auto;
+  font-weight: 400;
 }
 
-/* --- SECTION 5: CRAFTSMANSHIP BANNER (WITH HOVER EFFECT) --- */
+/* --- SECTION 5: CRAFTSMANSHIP BANNER (LUXURY GOLDEN THEME) --- */
 .hand {
   position: relative;
   width: 100%;
-  height: 60vh;
-  min-height: 420px;
+  height: 65vh;
+  min-height: 460px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  cursor: pointer;
 }
 
 .hand img {
@@ -502,70 +727,114 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s ease;
+  transition: transform 0.8s ease;
 }
 
-/* Custom creations-il ullathu pole ulla overlay effect */
+/* Deep cinematic luxury overlay with subtle gold hint */
 .overlayxx {
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.55);
-  transition: background-color 0.5s ease;
+  background: radial-gradient(circle at center, rgba(16, 12, 18, 0.65) 0%, rgba(8, 6, 10, 0.88) 100%);
+  transition: background 0.6s ease;
   z-index: 1;
 }
 
-/* Hover cheyyumbol overlay transparent aayi background image thelinju varunnu */
+/* Hover cheyyumbol overlay soften aayi image kooduthal thelinju varunnu */
 .hand:hover .overlayxx {
-  background-color: rgba(0, 0, 0, 0.2);
+  background: radial-gradient(circle at center, rgba(16, 12, 18, 0.35) 0%, rgba(8, 6, 10, 0.6) 100%);
 }
 
-/* Hover cheyyumbol background image-il cheriyoru zoom effect */
+/* Image slow smooth zoom effect */
 .hand:hover img {
-  transform: scale(1.04);
+  transform: scale(1.06);
 }
 
 .overlayx {
   position: relative;
   z-index: 2;
-  max-width: 850px;
+  width: 90%;
+  max-width: 860px;
   text-align: center;
-  color: #ffffff;
-  padding: 20px;
-  transition: transform 0.4s ease;
+  padding: 30px 20px;
+  transition: transform 0.5s ease;
 }
 
+/* Text and button subtle float up */
 .hand:hover .overlayx {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
 }
 
 .overlayx h2 {
-  font-size: clamp(22px, 2.8vw, 38px);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(24px, 3.2vw, 42px);
   font-weight: 600;
-  margin-bottom: 15px;
+  line-height: 1.35;
+  letter-spacing: 0.8px;
+  margin-bottom: 18px;
+  
+  /* Metallic Golden Gradient Text */
+  background: linear-gradient(135deg, #ffffff 0%, #fae292 40%, #d4af37 75%, #aa820a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.6));
 }
 
 .overlayx p {
-  font-size: 16px;
-  line-height: 1.7;
-  margin-bottom: 25px;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(14px, 1.2vw, 16.5px);
+  line-height: 1.85;
+  color: #ede2d1;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+  margin: 0 auto 30px auto;
+  max-width: 720px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
 
+/* Luxury Metallic Gold Button */
 .cdcd {
-  background-color: var(--primary-purple);
-  border: none;
-  padding: 12px 28px;
-  border-radius: 6px;
+  position: relative;
+  background: linear-gradient(135deg, #caa146 0%, #e8cb75 50%, #b88a28 100%);
+  border: 1px solid rgba(255, 235, 175, 0.6);
+  padding: 12px 34px;
+  border-radius: 30px;
   cursor: pointer;
+  box-shadow: 0 4px 18px rgba(184, 138, 40, 0.35);
+  overflow: hidden;
+  transition: all 0.35s ease;
+}
+
+/* Button-il mouse vekkumbol ulla golden light sheen */
+.cdcd::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+  transform: skewX(-25deg);
+  transition: 0.6s ease;
+}
+
+.cdcd:hover::after {
+  left: 140%;
 }
 
 .cdcd a {
-  color: #ffffff;
-  font-weight: 600;
-  font-size: 15px;
+  color: #24190c;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
 }
 
 .cdcd:hover {
-  background-color: var(--hover-purple);
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #d8b257 0%, #fae292 50%, #c99933 100%);
+  box-shadow: 0 6px 24px rgba(212, 175, 55, 0.55);
 }
 
 /* --- LUXURY JEWELLERY FOOTER --- */
@@ -863,10 +1132,12 @@ a {
     align-items: center;
     height: 60px;
     padding: 0 16px;
-    background: #fff;
-    border-bottom: 1px solid #eee;
-    position: sticky;
+    background: transparent;
+    border-bottom: none;
+    position: absolute;
     top: 0;
+    left: 0;
+    width: 100%;
     z-index: 1000;
   }
 
@@ -884,10 +1155,11 @@ a {
 
   .bar,
   #bar {
-    height: 3px;
+    height: 2.5px;
     width: 26px;
     border-radius: 2px;
-    background-color: var(--accent-purple);
+    background: linear-gradient(90deg, #c59b3f, #fae292);
+    box-shadow: 0 1px 4px rgba(212, 175, 55, 0.4);
   }
 
   #menu {
@@ -896,36 +1168,71 @@ a {
     top: 60px;
     left: 0;
     width: 100%;
-    background-color: rgba(144, 111, 163, 0.96);
+    background: rgba(18, 14, 20, 0.96);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 2px solid rgba(212, 175, 55, 0.4);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
     overflow: hidden;
     max-height: 0;
     opacity: 0;
     transition:
-      max-height 0.4s ease,
+      max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1),
       opacity 0.4s ease;
     z-index: 999;
+    padding: 0;
   }
 
   #menu.show {
-    max-height: 300px;
+    max-height: 320px;
     opacity: 1;
+    padding: 10px 0 16px 0;
   }
 
   .menu-btnn {
-    width: 100%;
-    height: 44px;
-    padding-left: 20px;
-    color: #fff;
+    width: 90%;
+    margin: 4px auto;
+    height: 48px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: #fce8ad !important;
+    -webkit-text-fill-color: #fce8ad !important;
+    background: transparent !important;
+    background-image: none !important;
     border: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
     text-align: left;
+    box-shadow: none !important;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    transition: all 0.3s ease;
+  }
+
+  .menu-btnn:active,
+  .menu-btnn:hover {
+    background: rgba(212, 175, 55, 0.12);
+    color: #ffffff;
+    padding-left: 26px;
+    border-bottom-color: rgba(212, 175, 55, 0.5);
   }
 
   /* Hero Section */
   .home {
-    height: 55vh;
-    min-height: 380px;
+    height: 65vh;
+    min-height: 440px;
     background-image: none !important;
+    padding-top: 60px;
+    padding-bottom: 0;
+    align-items: center !important;
+    justify-content: center !important;
   }
 
   #mob-v {
@@ -941,7 +1248,11 @@ a {
     margin-left: 0;
     width: 100%;
     text-align: center;
-    padding: 0 15px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .home-data p {

@@ -46,10 +46,10 @@ a {
   background: none;
 }
 
-/* --- HEADER & NAVIGATION --- */
+/* --- HEADER & NAVIGATION (TRANSPARENT OVERLAY) --- */
 .mob-t,
 #menu {
-  display: none; /* ഡെസ്ക്ടോപ്പിൽ മൊബൈൽ മെനു പൂർണ്ണമായി മറയ്ക്കുന്നു */
+  display: none;
 }
 
 .desk-t {
@@ -59,10 +59,12 @@ a {
   align-items: center;
   justify-content: space-between;
   padding: 0 4vw;
-  background: #ffffff;
-  position: relative;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
   z-index: 100;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: none;
 }
 
 .loggo-desk img {
@@ -73,85 +75,88 @@ a {
 #deskmenu {
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: 20px;
+  margin-top: 30px;
 }
 
-#deskmenu {
-  display: flex;
-  align-items: center;
-  gap: 32px;
-}
-
+/* Capsule Luxury Buttons */
 .menu-btnn {
-  background: none;
-  border: none;
+  background: rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1.2px solid rgba(212, 175, 55, 0.6);
+  border-radius: 25px;
   font-family: "Poppins", sans-serif;
-  font-size: 14.5px;
-  font-weight: 500;
-  letter-spacing: 1.5px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  color: #2b262d;
-  cursor: pointer;
-  padding: 8px 0;
+  padding: 8px 22px;
   position: relative;
-  transition: color 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  color: #cca43b;
+  -webkit-text-fill-color: initial;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.6);
 }
 
-/* Elegant expanding gold underline on hover */
 .menu-btnn::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, #d4af37 0%, #aa820a 100%);
-  transition: width 0.35s ease;
+  display: none;
 }
 
 .menu-btnn:hover,
 .menu-btnn.active-nav {
-  color: #aa820a;
+  background: rgba(255, 255, 255, 0.45);
+  border-color: #d4af37;
+  color: #9e7518;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.35);
 }
 
-.menu-btnn:hover::after,
-.menu-btnn.active-nav::after {
-  width: 100%;
-}
-
+/* Metallic Gold Phone Button */
 #desk-c-c {
-  background-color: var(--accent-purple);
-  padding: 10px 22px;
-  border: none;
-  border-radius: 8px;
+  background: linear-gradient(135deg, #c59b3f 0%, #fae292 50%, #b38424 100%);
+  padding: 10px 24px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 30px;
   cursor: pointer;
-  transition: all var(--transition-duration) ease;
+  margin-top: 30px;
+  box-shadow: 0 4px 15px rgba(179, 132, 36, 0.35);
+  transition: all 0.35s ease;
 }
 
 #desk-c-c a {
-  color: #ffffff;
-  font-weight: 600;
-  font-size: 15px;
+  color: #241708;
+  font-weight: 700;
+  font-size: 14.5px;
+  letter-spacing: 0.8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 #desk-c-c:hover {
-  background: linear-gradient(90deg, #8e2de2 0%, #ff267a 100%);
-  box-shadow: 0 4px 12px rgba(142, 45, 226, 0.2);
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #d8ab48 0%, #fff0b3 50%, #c4922b 100%);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.55);
 }
 
-/* --- HERO BANNER --- */
+/* --- HERO BANNER (TOP EXTENDED) --- */
 .abh1 {
   width: 100%;
-  height: 42vh;
-  min-height: 280px;
+  height: 58vh;
+  min-height: 420px;
   position: relative;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 90px;
 }
 
+.abh1 picture,
+.abh1-img,
 .abh1 img {
   width: 100%;
   height: 100%;
@@ -159,7 +164,7 @@ a {
   position: absolute;
   top: 0;
   left: 0;
-  filter: brightness(0.7);
+  filter: brightness(0.65);
 }
 
 .overlayxx {
@@ -384,17 +389,16 @@ a {
   border: none;
 }
 
-/* --- CRAFTSMANSHIP BANNER WITH HOVER EFFECT --- */
+/* --- CRAFTSMANSHIP BANNER (LUXURY GOLDEN THEME) --- */
 .hand {
   position: relative;
   width: 100%;
-  height: 55vh;
-  min-height: 380px;
+  height: 65vh;
+  min-height: 460px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  cursor: pointer;
 }
 
 .hand img {
@@ -403,63 +407,106 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s ease;
+  transition: transform 0.8s ease;
 }
 
 .hand .overlayxx {
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.55);
-  transition: background-color 0.5s ease;
+  background: radial-gradient(circle at center, rgba(16, 12, 18, 0.65) 0%, rgba(8, 6, 10, 0.88) 100%);
+  transition: background 0.6s ease;
   z-index: 1;
 }
 
 .hand:hover .overlayxx {
-  background-color: rgba(0, 0, 0, 0.2);
+  background: radial-gradient(circle at center, rgba(16, 12, 18, 0.35) 0%, rgba(8, 6, 10, 0.6) 100%);
 }
 
 .hand:hover img {
-  transform: scale(1.04);
+  transform: scale(1.06);
 }
 
 .hand .overlayx {
   position: relative;
   z-index: 2;
-  max-width: 850px;
+  width: 90%;
+  max-width: 860px;
   text-align: center;
-  color: #ffffff;
-  padding: 20px;
-  transition: transform 0.4s ease;
+  padding: 30px 20px;
+  transition: transform 0.5s ease;
 }
 
 .hand:hover .overlayx {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
 }
 
 .hand .overlayx h2 {
-  font-size: clamp(22px, 2.8vw, 38px);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(24px, 3.2vw, 42px);
   font-weight: 600;
-  margin-bottom: 15px;
+  line-height: 1.35;
+  letter-spacing: 0.8px;
+  margin-bottom: 18px;
+  background: linear-gradient(135deg, #ffffff 0%, #fae292 40%, #d4af37 75%, #aa820a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.6));
 }
 
 .hand .overlayx p {
-  font-size: 15.5px;
-  line-height: 1.7;
-  margin-bottom: 25px;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(14px, 1.2vw, 16.5px);
+  line-height: 1.85;
+  color: #ede2d1;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+  margin: 0 auto 30px auto;
+  max-width: 720px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
 
 .cdcd {
-  background-color: var(--primary-purple);
-  border: none;
-  padding: 12px 28px;
-  border-radius: 6px;
+  position: relative;
+  background: linear-gradient(135deg, #caa146 0%, #e8cb75 50%, #b88a28 100%);
+  border: 1px solid rgba(255, 235, 175, 0.6);
+  padding: 12px 34px;
+  border-radius: 30px;
   cursor: pointer;
+  box-shadow: 0 4px 18px rgba(184, 138, 40, 0.35);
+  overflow: hidden;
+  transition: all 0.35s ease;
 }
 
 .cdcd a {
-  color: #ffffff;
-  font-weight: 600;
-  font-size: 15px;
+  color: #24190c;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.cdcd::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+  transform: skewX(-25deg);
+  transition: 0.6s ease;
+}
+
+.cdcd:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #d8b257 0%, #fae292 50%, #c99933 100%);
+  box-shadow: 0 6px 24px rgba(212, 175, 55, 0.55);
+}
+
+.cdcd:hover::after {
+  left: 140%;
 }
 
 /* --- LUXURY FOOTER --- */
@@ -773,10 +820,12 @@ a {
     align-items: center;
     height: 60px;
     padding: 0 16px;
-    background: #fff;
-    border-bottom: 1px solid #eee;
-    position: sticky;
+    background: transparent;
+    border-bottom: none;
+    position: absolute;
     top: 0;
+    left: 0;
+    width: 100%;
     z-index: 1000;
   }
 
@@ -794,10 +843,17 @@ a {
 
   .bar,
   #bar {
-    height: 3px;
+    height: 2.5px;
     width: 26px;
     border-radius: 2px;
-    background-color: var(--accent-purple);
+    background: linear-gradient(90deg, #c59b3f, #fae292);
+    box-shadow: 0 1px 4px rgba(212, 175, 55, 0.4);
+  }
+
+  .abh1 {
+    height: 50vh;
+    min-height: 350px;
+    padding-top: 60px;
   }
 
   #menu {
@@ -805,29 +861,61 @@ a {
     top: 60px;
     left: 0;
     width: 100%;
-    background-color: rgba(144, 111, 163, 0.96);
+    background: rgba(18, 14, 20, 0.96);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 2px solid rgba(212, 175, 55, 0.4);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
     overflow: hidden;
     max-height: 0;
     opacity: 0;
-    transition:
-      max-height 0.4s ease,
-      opacity 0.4s ease;
     z-index: 999;
+    padding: 0;
+    transition:
+      max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+      opacity 0.4s ease;
   }
 
   #menu.show {
-    max-height: 300px;
+    max-height: 320px;
     opacity: 1;
+    padding: 10px 0 16px 0;
   }
 
   .menu-btnn {
-    width: 100%;
-    height: 44px;
-    padding-left: 20px;
-    color: #fff;
-    border: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    width: 90%;
+    margin: 4px auto;
+    height: 48px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: #fce8ad !important;
+    -webkit-text-fill-color: #fce8ad !important;
+    background: transparent !important;
+    background-image: none !important;
+    border: none !important;
+    border-radius: 8px;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2) !important;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
     text-align: left;
+    box-shadow: none !important;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .menu-btnn:active,
+  .menu-btnn:hover,
+  .menu-btnn.active-nav {
+    background: rgba(212, 175, 55, 0.15) !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    padding-left: 26px;
+    border-bottom-color: rgba(212, 175, 55, 0.5) !important;
   }
 
   .contact {

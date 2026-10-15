@@ -16,7 +16,7 @@
   <!-- MOBILE HEADER -->
   <div class="mob-t">
     <div class="t-mob">
-      <img src="images/logo.png" alt="Tiana Gold & Diamonds" id="logo" />
+      <a href="index.html"><img src="images/logo.png" alt="Tiana Gold & Diamonds" id="logo" /></a>
     </div>
     <div class="t-mob1">
       <div class="hamburger" id="menu-btn">
@@ -37,7 +37,7 @@
   <!-- DESKTOP HEADER -->
   <div class="desk-t">
     <div class="loggo-desk">
-      <img src="images/logo.png" alt="Tiana Gold & Diamonds" id="logo" />
+      <a href="index.html"><img src="images/logo.png" alt="Tiana Gold & Diamonds" id="logo" /></a>
     </div>
     <div id="deskmenu">
       <a href="index.html"><button class="menu-btnn">Home</button></a>
@@ -47,14 +47,17 @@
     </div>
     <div class="desk-mob-c">
       <button id="desk-c-c">
-        <a href="tel:+919645522916">+91 96455 22916</a>
+        <a href="javascript:void(0)" onclick="handlePhoneClick(event)"><i class="fas fa-phone-alt"></i> +91 96455 22916</a>
       </button>
     </div>
   </div>
 
   <!-- HERO BANNER -->
   <div class="abh1">
-    <img src="images/index/custom/c1.webp" alt="About Tiana Gold and Diamonds">
+    <picture>
+      <source media="(max-width: 992px)" srcset="images/index/custom/c1.webp">
+      <img src="images/index/home.png" alt="About Tiana Gold and Diamonds" class="abh1-img">
+    </picture>
     <div class="overlayxx"></div>
     <div class="overlayx xcx">
       <h2 id="abh11">ABOUT US</h2>
@@ -301,6 +304,18 @@
         setTimeout(() => toast.remove(), 400);
       }, duration);
     }
+
+    function handlePhoneClick(e) {
+    if (e) e.preventDefault();
+    const phoneNumber = "919645522916";
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 992;
+
+    if (isMobile) {
+      window.location.href = `tel:+${phoneNumber}`;
+    } else {
+      window.open(`https://web.whatsapp.com/send?phone=${phoneNumber}`, '_blank');
+    }
+  }
   </script>
 </body>
 </html>
