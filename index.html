@@ -7,13 +7,12 @@
 <title>Tiana Gold and Diamonds | Exquisite Fine Jewelry</title>
 <meta content="Shop exquisite gold and diamond jewelry at Tiana. Discover timeless designs, custom creations, and elegant ornaments for every special moment in Kerala." name="description"/>
 <meta name="keywords" content="gold jewelry, diamond jewelry, custom jewelry, Tiana Gold and Diamonds, Kerala jewelers, wedding collections, fine jewelry">
+<!-- Font Awesome & AOS Libraries -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
-<!-- AOS Animation Library CSS -->
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
-<link href="css/menu.css" rel="stylesheet">
+
+<!-- Single Consolidated CSS for Index -->
 <link href="css/index.css" rel="stylesheet">
-<link href="css/booten.css" rel="stylesheet"/>
 <!-- മൊബൈലിലും ഡെസ്ക്ടോപ്പിലും ഹീറോ ഇമേജ് വേഗത്തിൽ വരാൻ -->
 <link rel="preload" as="image" href="images/index/home-mob.png" media="(max-width: 1000px)"/>
 <link rel="preload" as="image" href="images/index/home.png" media="(min-width: 1001px)"/>
@@ -174,43 +173,69 @@
 <button class="cdcd"><a href="Contact.html">Contact Us</a></button>
 </div>
 </div>
-<footer>
-<div class="qcl" id="x">
-<h1>Quick Links</h1>
-<a href="index.html">Home</a>
-<a href="About.html">About Us</a>
-<a href="Gallery.html">Gallery</a>
-<a href="Contact.html">Contact</a>
-</div>
-<div id="x">
-<h1>Business Hours</h1>
-<p id="bst" style="color: white;">10.00 Am - 7.00 Pm</p>
-</div>
-<div id="y">
-<h1 id="xcv">Tiana Gold and Diamonds</h1>
-<a><i class="fas fa-map-marker-alt icon-outline"></i> <span style="line-height: 1.5; margin-left: 0;">KLM Tower, College Road Kothamangalam<br>Kerala, 686691</span></a>
-<a href="tel:+919645522916"><i class="fas fa-phone icon-outline"></i> <span style="margin-left: 0;">+91 96455 22916</span></a>
-<a href="https://mail.google.com/mail/?view=cm&amp;to=tianaklmtower@gmail.com" target="_blank"><i class="fas fa-envelope icon-outline"></i> <span style="margin-left: 0;">tianaklmtower@gmail.com</span></a>
-<a href="https://maps.app.goo.gl/LbqQLvwL2xSKGuHf8"><i class="fas fa-paperclip icon-outline"></i> <span style="margin-left: 0;">Navigate</span></a>
-</div>
-<div class="zzz" id="x">
-<h1>Google Reviews</h1>
-<div class="stars">
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
-</div>
-<button class="Reviews"><a href="https://g.page/r/CUU1-99CFYy0EBM/review">REVIEW US</a>
-</button></div>
-<span id="copy">Copyright © <span id="year"></span> Tiana Gold and Diamonds  | All Rights Reserved.</span>
-<div class="mcopy">
-<p id="mcopy" style="line-height: 1.6;">Copyright © <span id="year"></span> Tiana Gold and Diamonds <br> All Rights Reserved.</p>
-</div>
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+<footer class="jewellery-footer">
+  <div class="footer-container">
+    <div class="footer-col brand-col">
+      <h2 class="footer-title gold-text">Tiana Gold & Diamonds</h2>
+      <p class="brand-tagline">Crafting timeless elegance and radiant memories for every special moment.</p>
+      <div class="contact-details">
+        <a href="https://maps.app.goo.gl/LbqQLvwL2xSKGuHf8" target="_blank">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>KLM Tower, College Road, Kothamangalam, Kerala 686691</span>
+        </a>
+        <a href="tel:+919645522916">
+          <i class="fas fa-phone-alt"></i>
+          <span>+91 96455 22916</span>
+        </a>
+        <a href="mailto:tianaklmtower@gmail.com">
+          <i class="fas fa-envelope"></i>
+          <span>tianaklmtower@gmail.com</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h3 class="footer-heading">Quick Links</h3>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html">About Us</a></li>
+        <li><a href="Gallery.html">Our Collections</a></li>
+        <li><a href="Contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3 class="footer-heading">Business Hours</h3>
+      <div class="hours-box">
+        <span class="days">Monday – Saturday</span>
+        <span class="time gold-text">10:00 AM – 7:00 PM</span>
+        <span class="closed">Sunday: Closed</span>
+      </div>
+    </div>
+
+    <div class="footer-col reviews-col">
+      <h3 class="footer-heading">Client Experiences</h3>
+      <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+      </div>
+      <p class="review-subtext">Rated 5.0 on Google</p>
+      <a href="https://g.page/r/CUU1-99CFYy0EBM/review" target="_blank" class="review-btn">
+        WRITE A REVIEW
+      </a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Copyright © <span id="year"></span> Tiana Gold and Diamonds. All Rights Reserved.</p>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </footer>
 <div aria-label="floating action buttons" class="xfab-container" id="xfabContainer">
 <button aria-label="Call" class="xfab btn-call"><a href="tel:+9645522916"><i class="fa fa-phone"></i></a></button>
