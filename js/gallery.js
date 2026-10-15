@@ -1,10 +1,10 @@
-// Ivide user-nu thalparyamulla images order anusarichu list cheyyam
+// Latest Creations-ൽ ആവശ്യമുള്ള ടൈറ്റിൽ ഇവിടെ നൽകാം (title ഒഴിച്ചിട്ടാൽ തനിയെ Design #code ആയിക്കോളും)
 const latestCreationsFiles = [
-  { file: "1.png" },
-  { file: "2.png" },
-  { file: "3.png" },
-  { file: "4.png" },
-  { file: "5.png" }
+  { file: "17.png", title: " " },
+  { file: "25.png", title: " " },
+  { file: "75.png", title: " " },
+  { file: "44.png", title: " " },
+  { file: "9.png", title: " " }
 ];
 
 // --- MAIN GALLERY ITEMS (TITLE PORTION REMOVED) ---
@@ -149,13 +149,16 @@ function renderRecentArrivals() {
 
   recentContainer.innerHTML = latestCreationsFiles.map(item => {
     const code = item.file.replace(/\.[^/.]+$/, "");
+    // Title നൽകിയിട്ടുണ്ടെങ്കിൽ അത് എടുക്കും, ഇല്ലെങ്കിൽ മാത്രം fallback ആയി Design #code എടുക്കും
+    const displayTitle = (item.title && item.title.trim() !== "") ? item.title : `Design #${code}`;
+
     return `
       <div class="recent-card">
         <div class="recent-img-box">
-          <img src="images/Gallery/${item.file}" alt="Design #${code}" loading="lazy" />
+          <img src="images/Gallery/${item.file}" alt="${displayTitle}" loading="lazy" />
           <span class="recent-tag">New</span>
         </div>
-        <h4>Design #${code}</h4>
+        <h4>${displayTitle}</h4>
       </div>
     `;
   }).join('');
